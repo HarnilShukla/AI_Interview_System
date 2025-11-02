@@ -1,0 +1,52 @@
+{% extends "main.html" %}
+{% block title %}<title>Register</title>{% endblock title %}
+
+{% block body %}
+<form class="my-4" method="POST" action="/register" enctype="multipart/form-data">
+  <div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <!-- Blue border added to wrap the form -->
+    <div class="border border-primary p-4 shadow-lg rounded-4" style="background-color: #fff; max-width: 500px; width: 100%; box-shadow: 6px 6px 12px #c8c8c8, -6px -6px 12px #ffffff;">
+      <h2 class="text-center mb-4 text-primary">Register</h2>
+      
+      <!-- Username Field -->
+      <div class="mb-4">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username" placeholder="Enter your username" name="username" required>
+      </div> 
+      
+      <!-- Password Field -->
+      <div class="mb-4">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter your password" name="password" required>
+      </div> 
+
+      <!-- Domain Selection Field -->
+      <div class="mb-4">
+        <label for="domain" class="form-label">Select Domain</label>
+        <select class="form-control" id="domain" name="domain" required>
+          <option value="Select Domain">--Select Domain--</option>
+          <option value="Cybersecurity">Cybersecurity</option>
+          <option value="Data Analyst">Data Analyst</option>
+          <option value="Software Engineering">Software Engineering</option>
+          <option value="Data Science">Data Science</option>
+          <option value="Web Development">Web Development</option>
+          <option value="AI/ML">AI/ML</option>
+          <option value="Blockchain">Blockchain</option>
+          <option value="Others">Others</option>
+        </select>
+      </div> 
+      
+      <!-- CV Upload Field  -->
+      <div class="mb-4">
+        <label for="cv" class="form-label">Upload CV</label>
+        <input type="file" class="form-control" id="cv" name="cv" accept=".pdf" required>
+      </div> 
+      
+      <!-- Submit Button -->
+      <div>
+        <button class="btn btn-primary w-100" style="padding: 12px; font-size: 18px;">Register</button>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock body %}
